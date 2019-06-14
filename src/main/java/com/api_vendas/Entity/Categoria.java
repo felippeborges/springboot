@@ -1,5 +1,6 @@
 package com.api_vendas.Entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -20,7 +21,7 @@ public class Categoria {
 	private String nome;
 	@ManyToMany(mappedBy = "categoria")
 	@Column
-	private List<Produto> produtos;
+	private List<Produto> produtos = new ArrayList<>();
 
 	public Categoria() {
 
